@@ -15,6 +15,7 @@ class Array:
 
     def get_capacity(self):
         return len(self._data)
+
     def get_element(self,index):
         return self._data[index]
 

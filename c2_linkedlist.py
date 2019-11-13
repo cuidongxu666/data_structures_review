@@ -1,3 +1,4 @@
+#索引的作用只不过为了循环找到删除点前面一点，
 class LinkedList:
     class _Node:
         def __init__(self,e=None):

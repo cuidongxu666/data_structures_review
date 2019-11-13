@@ -24,6 +24,7 @@ class LoopQueue:
         self._size+=1
 
     def dequque(self):
+        ret=self._data[self._front]
         self._data[self._front]=None
         self._front=(self._front+1)//len(self._data)
         self._size-=1
@@ -31,7 +32,7 @@ class LoopQueue:
         if self._size==self.get_capacity()//4 and self.get_capacity()//2!=0:
             self._resize(self.get_capacity()//2)
 
-        return self._data[self._front]
+        return ret
 
     def check_front(self):
         return self._data[self._front]

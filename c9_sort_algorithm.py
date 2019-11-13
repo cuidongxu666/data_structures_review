@@ -92,16 +92,16 @@ def binary_search(alist,k):
 #这个算法当时为什么绕不过来
 def binary_search2(alist,k):
     n=len(alist)
-    first=0
-    last=n-1
-    while first<=last:
-        mid=(first+last)//2
+    l=0
+    r=n-1
+    while l<=r:
+        mid=l+(r-1)//2
         if alist[mid]==k:
             return True
         elif alist[mid]<k:
-            first=mid+1
+            l=mid+1
         else:
-            last=mid-1
+            r=mid-1
     return False
 
 #时间复杂度

@@ -1,3 +1,4 @@
+#链表映射没有索引，添加要么改值，要么从头添加，删除注意取到前面一个
 class LinkedListMap:
     class _Node:
         def __init__(self,key=None,value=None,next=None):
@@ -22,7 +23,7 @@ class LinkedListMap:
                 return curr
             curr=curr.next
 
-    def add(self,index,key,value):
+    def add(self,key,value):
         node=self._get_node(key)
         if not node:
             self._dummy_node.next=self._Node(key,value,self._dummy_node.next)
